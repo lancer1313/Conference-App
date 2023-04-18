@@ -32,3 +32,7 @@ D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.genrunt
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\ref\Conference.dll
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.PersonAdditionForm.resources
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.MeetingAdditionForm.resources
+D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.ViewPersonForm.resources
+D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.ReportAdditionForm.resources
+D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.ViewMeetingForm.resources
+D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.ViewReportForm.resources

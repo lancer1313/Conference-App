@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.newPersonBtn = new System.Windows.Forms.Button();
             this.textFirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,18 +41,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textRole = new System.Windows.Forms.ComboBox();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // newPersonBtn
             // 
-            this.button1.Location = new System.Drawing.Point(339, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.newPersonBtn.BackColor = System.Drawing.Color.Green;
+            this.newPersonBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.newPersonBtn.Location = new System.Drawing.Point(12, 309);
+            this.newPersonBtn.Name = "newPersonBtn";
+            this.newPersonBtn.Size = new System.Drawing.Size(133, 40);
+            this.newPersonBtn.TabIndex = 0;
+            this.newPersonBtn.Text = "Добавить";
+            this.newPersonBtn.UseVisualStyleBackColor = false;
+            this.newPersonBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // textFirstName
             // 
@@ -167,14 +170,31 @@
             this.errorLabel.Size = new System.Drawing.Size(0, 21);
             this.errorLabel.TabIndex = 13;
             // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.Red;
+            this.closeBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.closeBtn.Location = new System.Drawing.Point(339, 309);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(133, 40);
+            this.closeBtn.TabIndex = 15;
+            this.closeBtn.Text = "Закрыть";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
             // PersonAdditionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.newPersonBtn);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 400);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 400);
             this.Name = "PersonAdditionForm";
             this.Text = "Добавить участника";
             this.panel1.ResumeLayout(false);
@@ -186,7 +206,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button newPersonBtn;
         private TextBox textFirstName;
         private Label label1;
         private Label label2;
@@ -199,5 +219,6 @@
         private Panel panel1;
         private Label errorLabel;
         private ComboBox textRole;
+        private Button closeBtn;
     }
 }

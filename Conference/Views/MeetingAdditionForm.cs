@@ -39,7 +39,7 @@ namespace Conference.Views
 
             Meeting meeting = new Meeting();
             meeting.Section = textSectionName.Text;
-            meeting.Date = dateTimePicker.Value.Date + " " + textDayTime.Text;
+            meeting.Date = dateTimePicker.Value.Day + "." + dateTimePicker.Value.Month + "." + dateTimePicker.Value.Year + " " + textDayTime.Text;
 
             using (DatabaseContext context = new DatabaseContext())
             {
@@ -63,5 +63,9 @@ namespace Conference.Views
             return "OK";
         }
 
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

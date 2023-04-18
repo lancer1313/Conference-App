@@ -10,5 +10,17 @@
     <Compile Update="Views\PersonAdditionForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\ReportAdditionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ViewMeetingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ViewPersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ViewReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

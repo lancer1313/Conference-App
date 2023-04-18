@@ -46,12 +46,13 @@ namespace Conference.Views
                 foreach (Person person in people)
                 {
                     int index = peopleTable.Rows.Add();
-                    peopleTable.Rows[index].Cells[0].Value = person.FirstName;
-                    peopleTable.Rows[index].Cells[1].Value = person.LastName;
-                    peopleTable.Rows[index].Cells[2].Value = person.Role;
-                    peopleTable.Rows[index].Cells[3].Value = person.PhoneNumber;
-                    peopleTable.Rows[index].Cells[4].Value = person.Email;
-                    peopleTable.Rows[index].Cells[5].Value = "Подробнее...";
+                    peopleTable.Rows[index].Cells[0].Value = person.Id;
+                    peopleTable.Rows[index].Cells[1].Value = person.FirstName;
+                    peopleTable.Rows[index].Cells[2].Value = person.LastName;
+                    peopleTable.Rows[index].Cells[3].Value = person.Role;
+                    peopleTable.Rows[index].Cells[4].Value = person.PhoneNumber;
+                    peopleTable.Rows[index].Cells[5].Value = person.Email;
+                    peopleTable.Rows[index].Cells[6].Value = "Подробнее...";
                 }
             }
         }
@@ -65,13 +66,48 @@ namespace Conference.Views
                 foreach (Meeting meeting in meetings)
                 {
                     int index = meetingsTable.Rows.Add();
-                    meetingsTable.Rows[index].Cells[0].Value = meeting.Section;
-                    meetingsTable.Rows[index].Cells[1].Value = meeting.Date;
-                    meetingsTable.Rows[index].Cells[2].Value = meeting.People.Count;
-                    meetingsTable.Rows[index].Cells[3].Value = "Подробнее...";
+                    meetingsTable.Rows[index].Cells[0].Value = meeting.Id;
+                    meetingsTable.Rows[index].Cells[1].Value = meeting.Section;
+                    meetingsTable.Rows[index].Cells[2].Value = meeting.Date;
+                    meetingsTable.Rows[index].Cells[3].Value = meeting.People.Count;
+                    meetingsTable.Rows[index].Cells[4].Value = "Подробнее...";
                 }
             }
         }
 
+        public void DisplayReports()
+        {
+
+        }
+
+        private void meetingsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 4)
+            {
+                return;
+            }
+            ViewMeetingForm form = new ViewMeetingForm(Convert.ToInt32(meetingsTable.Rows[e.RowIndex].Cells[0].Value));
+            form.ShowDialog();
+        }
+
+        private void peopleTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 6)
+            {
+                return;
+            }
+            ViewPersonForm form = new ViewPersonForm(Convert.ToInt32(peopleTable.Rows[e.RowIndex].Cells[0].Value));
+            form.ShowDialog();
+        }
+
+        private void reportTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 4)
+            {
+                return;
+            }
+            ViewReportForm form = new ViewReportForm(Convert.ToInt32(reportTable.Rows[e.RowIndex].Cells[0].Value));
+            form.ShowDialog();
+        }
     }
 }

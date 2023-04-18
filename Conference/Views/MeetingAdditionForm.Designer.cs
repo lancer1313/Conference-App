@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.newMeetingBtn = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,31 +107,51 @@
             // 
             // newMeetingBtn
             // 
-            this.newMeetingBtn.Location = new System.Drawing.Point(339, 309);
+            this.newMeetingBtn.BackColor = System.Drawing.Color.Green;
+            this.newMeetingBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.newMeetingBtn.Location = new System.Drawing.Point(9, 309);
             this.newMeetingBtn.Name = "newMeetingBtn";
             this.newMeetingBtn.Size = new System.Drawing.Size(133, 40);
             this.newMeetingBtn.TabIndex = 14;
             this.newMeetingBtn.Text = "Добавить";
-            this.newMeetingBtn.UseVisualStyleBackColor = true;
+            this.newMeetingBtn.UseVisualStyleBackColor = false;
             this.newMeetingBtn.Click += new System.EventHandler(this.newMeetingBtn_Click);
             // 
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
             this.errorLabel.Location = new System.Drawing.Point(9, 234);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(0, 21);
             this.errorLabel.TabIndex = 15;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.Red;
+            this.closeBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.closeBtn.Location = new System.Drawing.Point(339, 309);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(133, 40);
+            this.closeBtn.TabIndex = 16;
+            this.closeBtn.Text = "Закрыть";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // MeetingAdditionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.newMeetingBtn);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 400);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 400);
             this.Name = "MeetingAdditionForm";
             this.Text = "Добавить собрание по секции";
             this.panel1.ResumeLayout(false);
@@ -151,5 +172,6 @@
         private TextBox textDayTime;
         private Label label3;
         private Label errorLabel;
+        private Button closeBtn;
     }
 }

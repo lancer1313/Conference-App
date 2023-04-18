@@ -15,7 +15,7 @@ namespace Conference.Views
 {
     public partial class PersonAdditionForm : Form
     {
-        private MainForm _parentForm;
+        private MainForm _mainForm;
         private Dictionary<string, string> _regexPatterns = new Dictionary<string, string>()
         {
             {"firstName", @"^[А-ЯЁ][а-яё]*$" },
@@ -27,7 +27,7 @@ namespace Conference.Views
         public PersonAdditionForm(MainForm parentForm)
         {
             InitializeComponent();
-            _parentForm = parentForm;
+            _mainForm = parentForm;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace Conference.Views
                 context.SaveChanges();
                 MessageBox.Show("Участник успешно создан", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            _parentForm.DisplayPeople();
+            mainForm?.DisplayPeople();
         }
 
         private string ValidateFields(string firstName, string lastName, string role, string phoneNumber, string email)
@@ -79,6 +79,11 @@ namespace Conference.Views
                 return "Неправильная электронная почта!";
             }
             return "OK";
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
