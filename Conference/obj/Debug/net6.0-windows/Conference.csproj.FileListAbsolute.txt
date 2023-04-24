@@ -36,3 +36,6 @@ D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.V
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.ReportAdditionForm.resources
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.ViewMeetingForm.resources
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.ViewReportForm.resources
+D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.AddPeopleToMeetingForm.resources
+D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.JoinMeetingForm.resources
+D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.GreetingForm.resources

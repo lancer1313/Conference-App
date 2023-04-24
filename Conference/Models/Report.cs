@@ -12,7 +12,7 @@ namespace Conference.Models
         public string Theme { get; set; } = null!;
         public string Name { get; set; } = null!;
         public string Speciality { get; set; } = null!;
+        public int PersonId { get; set; }
         public Person Person { get; set; } = null!;
-        public Meeting? Meeting { get; set; }
     }
 }

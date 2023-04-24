@@ -24,10 +24,10 @@ namespace Conference.Views
             {"email", @"^[_a-z0-9-\+-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$" }
         };
 
-        public PersonAdditionForm(MainForm parentForm)
+        public PersonAdditionForm(MainForm mainForm)
         {
             InitializeComponent();
-            _mainForm = parentForm;
+            _mainForm = mainForm;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,20 +40,20 @@ namespace Conference.Views
             }
             errorLabel.Text = "";
 
-            Person person = new Person();
-            person.FirstName = textFirstName.Text;
-            person.LastName = textLastName.Text;
-            person.Role = textRole.Text;
-            person.PhoneNumber = textPhoneNumber.Text;
-            person.Email = textEmail.Text;
-
             using (DatabaseContext context = new DatabaseContext())
             {
+                Person person = new Person();
+                person.FirstName = textFirstName.Text;
+                person.LastName = textLastName.Text;
+                person.Role = textRole.Text;
+                person.PhoneNumber = textPhoneNumber.Text;
+                person.Email = textEmail.Text;
+
                 context.People.Add(person);
                 context.SaveChanges();
                 MessageBox.Show("Участник успешно создан", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            mainForm?.DisplayPeople();
+            _mainForm.DisplayPeople();
         }
 
         private string ValidateFields(string firstName, string lastName, string role, string phoneNumber, string email)

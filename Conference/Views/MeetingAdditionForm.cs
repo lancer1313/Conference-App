@@ -39,7 +39,7 @@ namespace Conference.Views
 
             Meeting meeting = new Meeting();
             meeting.Section = textSectionName.Text;
-            meeting.Date = dateTimePicker.Value.Day + "." + dateTimePicker.Value.Month + "." + dateTimePicker.Value.Year + " " + textDayTime.Text;
+            meeting.Date = dateTimePicker.Value.ToShortDateString() + " " + textDayTime.Text;
 
             using (DatabaseContext context = new DatabaseContext())
             {

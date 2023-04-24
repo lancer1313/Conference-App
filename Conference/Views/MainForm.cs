@@ -35,6 +35,7 @@ namespace Conference.Views
         {
             DisplayPeople();
             DisplayMeetings();
+            DisplayReports();
         }
 
         public void DisplayPeople()
@@ -77,7 +78,20 @@ namespace Conference.Views
 
         public void DisplayReports()
         {
-
+            reportTable.Rows.Clear();
+            using (DatabaseContext context = new DatabaseContext())
+            {
+                List<Report> reports = context.Reports.ToList();
+                foreach (Report report in reports)
+                {
+                    int index = reportTable.Rows.Add();
+                    reportTable.Rows[index].Cells[0].Value = report.Id;
+                    reportTable.Rows[index].Cells[1].Value = report.Name;
+                    reportTable.Rows[index].Cells[2].Value = report.Theme;
+                    reportTable.Rows[index].Cells[3].Value = report.Speciality;
+                    reportTable.Rows[index].Cells[4].Value = "Подробнее...";
+                }
+            }
         }
 
         private void meetingsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -86,7 +100,7 @@ namespace Conference.Views
             {
                 return;
             }
-            ViewMeetingForm form = new ViewMeetingForm(Convert.ToInt32(meetingsTable.Rows[e.RowIndex].Cells[0].Value));
+            ViewMeetingForm form = new ViewMeetingForm(Convert.ToInt32(meetingsTable.Rows[e.RowIndex].Cells[0].Value), this);
             form.ShowDialog();
         }
 
@@ -96,7 +110,7 @@ namespace Conference.Views
             {
                 return;
             }
-            ViewPersonForm form = new ViewPersonForm(Convert.ToInt32(peopleTable.Rows[e.RowIndex].Cells[0].Value));
+            ViewPersonForm form = new ViewPersonForm(Convert.ToInt32(peopleTable.Rows[e.RowIndex].Cells[0].Value), this);
             form.ShowDialog();
         }
 
