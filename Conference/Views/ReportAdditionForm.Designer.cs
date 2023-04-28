@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportAdditionForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textSpeciality = new System.Windows.Forms.ComboBox();
             this.textTheme = new System.Windows.Forms.TextBox();
@@ -153,6 +154,7 @@
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.newReportBtn);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(500, 400);
             this.MinimizeBox = false;
