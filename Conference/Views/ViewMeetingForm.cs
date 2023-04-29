@@ -63,7 +63,7 @@ namespace Conference.Views
                 peopleOnMeetingTable.Rows[index].Cells[2].Value = person.LastName;
                 peopleOnMeetingTable.Rows[index].Cells[3].Value = person.Role;
                 Report? personReport = person.Reports.Find(report => report.Theme == meeting.Section);
-                peopleOnMeetingTable.Rows[index].Cells[4].Value = personReport == null ? "Гость" : "Участник";
+                peopleOnMeetingTable.Rows[index].Cells[4].Value = personReport == null ? "Гость" : "Выступающий";
             }
         }
     }

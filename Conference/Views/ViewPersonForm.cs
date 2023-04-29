@@ -84,7 +84,7 @@ namespace Conference.Views
                 personMeetingsTable.Rows[index].Cells[1].Value = meeting.Section;
                 personMeetingsTable.Rows[index].Cells[2].Value = meeting.Date;
                 Report? report = person.Reports.Find(report => report.Theme == meeting.Section);
-                personMeetingsTable.Rows[index].Cells[3].Value = report == null ? "Гость" : "Участник";
+                personMeetingsTable.Rows[index].Cells[3].Value = report == null ? "Гость" : "Выступающий";
             }
         }
 

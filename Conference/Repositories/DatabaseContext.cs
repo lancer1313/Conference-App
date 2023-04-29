@@ -20,7 +20,8 @@ namespace Conference.Repositories
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("server=localhost;user=root;password=root;database=conference", new MySqlServerVersion(new Version(8, 0, 30)));
+            //optionsBuilder.UseMySql("server=localhost;user=root;password=root;database=conference", new MySqlServerVersion(new Version(8, 0, 30)));
+            optionsBuilder.UseSqlite("Data Source=conference.db");
         }
     }
 }

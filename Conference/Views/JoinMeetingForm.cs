@@ -72,7 +72,7 @@ namespace Conference.Views
                     personMeetingsTable.Rows[index].Cells[0].Value = meeting.Id;
                     personMeetingsTable.Rows[index].Cells[1].Value = meeting.Section;
                     personMeetingsTable.Rows[index].Cells[2].Value = meeting.Date;
-                    personMeetingsTable.Rows[index].Cells[3].Value = person.Reports.Any(report => report.Theme == meeting.Section) ? "Участник" : "Гость";
+                    personMeetingsTable.Rows[index].Cells[3].Value = person.Reports.Any(report => report.Theme == meeting.Section) ? "Выступающий" : "Гость";
                     personMeetingsTable.Rows[index].Cells[4].Value = "Добавить";
                 }
             }
