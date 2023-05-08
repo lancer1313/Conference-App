@@ -76,6 +76,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GreetingForm";
             this.Text = "Информация об авторе и тема проекта";
+            this.Load += new System.EventHandler(this.GreetingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

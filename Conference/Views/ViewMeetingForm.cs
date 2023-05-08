@@ -64,6 +64,29 @@ namespace Conference.Views
                 peopleOnMeetingTable.Rows[index].Cells[3].Value = person.Role;
                 Report? personReport = person.Reports.Find(report => report.Theme == meeting.Section);
                 peopleOnMeetingTable.Rows[index].Cells[4].Value = personReport == null ? "Гость" : "Выступающий";
+                peopleOnMeetingTable.Rows[index].Cells[5].Value = "Удалить";
+            }
+        }
+
+        private void peopleOnMeetingTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    int personId = Convert.ToInt32(peopleOnMeetingTable.Rows[e.RowIndex].Cells[0].Value);
+                    Meeting meeting = context.Meetings.Include(m => m.People).First(m => m.Id == _meetingId);
+                    Person person = context.People.First(p => p.Id == personId);
+                    meeting.People.Remove(person);
+                    context.SaveChanges();
+                    DisplayPeopleOnMeeting();
+                    _mainForm.DisplayMeetings();
+                    textCount.Text = meeting.People.Count.ToString();
+                }
+            }
+            else
+            {
+                return;
             }
         }
     }

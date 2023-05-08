@@ -58,12 +58,47 @@ namespace Conference.Views
 
         private void personsReportTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex != 4)
+            if (e.ColumnIndex == 4)
+            {
+                ViewReportForm form = new ViewReportForm(Convert.ToInt32(personsReportTable.Rows[e.RowIndex].Cells[0].Value));
+                form.ShowDialog();
+            }
+            else if (e.ColumnIndex == 5)
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    Report report = context.Reports.First(rep => rep.Id == Convert.ToInt32(personsReportTable.Rows[e.RowIndex].Cells[0].Value));
+                    context.Reports.Remove(report);
+                    context.SaveChanges();
+                    DisplayPersonsReports();
+                    _mainForm.DisplayReports();
+                }
+            }
+            else
             {
                 return;
             }
-            ViewReportForm form = new ViewReportForm(Convert.ToInt32(personsReportTable.Rows[e.RowIndex].Cells[0].Value));
-            form.ShowDialog();
+        }
+
+        private void personMeetingsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                using (DatabaseContext context = new DatabaseContext())
+                {
+                    int meetingId = Convert.ToInt32(personMeetingsTable.Rows[e.RowIndex].Cells[0].Value);
+                    Meeting meeting = context.Meetings.First(m => m.Id == meetingId);
+                    Person person = context.People.Include(p => p.Meetings).First(p => p.Id == _personId);
+                    person.Meetings.Remove(meeting);
+                    context.SaveChanges();
+                    DisplayPersonsMeetings();
+                    _mainForm.DisplayMeetings();
+                }
+            }
+            else
+            {
+                return;
+            }
         }
 
         public void DisplayPersonsMeetings()
@@ -85,6 +120,7 @@ namespace Conference.Views
                 personMeetingsTable.Rows[index].Cells[2].Value = meeting.Date;
                 Report? report = person.Reports.Find(report => report.Theme == meeting.Section);
                 personMeetingsTable.Rows[index].Cells[3].Value = report == null ? "Гость" : "Выступающий";
+                personMeetingsTable.Rows[index].Cells[4].Value = "Удалить";
             }
         }
 
@@ -107,6 +143,7 @@ namespace Conference.Views
                 personsReportTable.Rows[index].Cells[2].Value = report.Theme;
                 personsReportTable.Rows[index].Cells[3].Value = report.Speciality;
                 personsReportTable.Rows[index].Cells[4].Value = "Подробнее...";
+                personsReportTable.Rows[index].Cells[5].Value = "Удалить";
             }
         }
     }

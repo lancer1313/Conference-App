@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMeetingForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.peopleOnMeetingTable = new System.Windows.Forms.DataGridView();
@@ -45,6 +46,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peopleOnMeetingTable)).BeginInit();
             this.panel1.SuspendLayout();
@@ -55,7 +57,7 @@
             this.groupBox1.Controls.Add(this.peopleOnMeetingTable);
             this.groupBox1.Location = new System.Drawing.Point(12, 146);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(498, 303);
+            this.groupBox1.Size = new System.Drawing.Size(834, 303);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Участники собрания";
@@ -75,14 +77,16 @@
             this.Column2,
             this.Column3,
             this.Column5,
-            this.Column4});
+            this.Column4,
+            this.Column6});
             this.peopleOnMeetingTable.Location = new System.Drawing.Point(6, 22);
             this.peopleOnMeetingTable.Name = "peopleOnMeetingTable";
             this.peopleOnMeetingTable.ReadOnly = true;
             this.peopleOnMeetingTable.RowHeadersVisible = false;
             this.peopleOnMeetingTable.RowTemplate.Height = 25;
-            this.peopleOnMeetingTable.Size = new System.Drawing.Size(478, 275);
+            this.peopleOnMeetingTable.Size = new System.Drawing.Size(814, 275);
             this.peopleOnMeetingTable.TabIndex = 0;
+            this.peopleOnMeetingTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.peopleOnMeetingTable_CellContentClick);
             // 
             // panel1
             // 
@@ -153,7 +157,7 @@
             // 
             this.addPersonToMeeting.BackColor = System.Drawing.Color.Green;
             this.addPersonToMeeting.ForeColor = System.Drawing.SystemColors.Window;
-            this.addPersonToMeeting.Location = new System.Drawing.Point(517, 168);
+            this.addPersonToMeeting.Location = new System.Drawing.Point(867, 177);
             this.addPersonToMeeting.Name = "addPersonToMeeting";
             this.addPersonToMeeting.Size = new System.Drawing.Size(155, 40);
             this.addPersonToMeeting.TabIndex = 15;
@@ -165,7 +169,7 @@
             // 
             this.closeBtn.BackColor = System.Drawing.Color.Red;
             this.closeBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.closeBtn.Location = new System.Drawing.Point(517, 403);
+            this.closeBtn.Location = new System.Drawing.Point(867, 409);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(155, 40);
             this.closeBtn.TabIndex = 16;
@@ -203,20 +207,35 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // Column6
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Column6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column6.HeaderText = "";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // ViewMeetingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ClientSize = new System.Drawing.Size(1034, 461);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.addPersonToMeeting);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 500);
+            this.MaximumSize = new System.Drawing.Size(1050, 500);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(700, 500);
+            this.MinimumSize = new System.Drawing.Size(1050, 500);
             this.Name = "ViewMeetingForm";
             this.Text = "Собрание";
             this.groupBox1.ResumeLayout(false);
@@ -245,5 +264,6 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column4;
+        private DataGridViewButtonColumn Column6;
     }
 }
