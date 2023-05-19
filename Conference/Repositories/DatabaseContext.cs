@@ -40,8 +40,10 @@ namespace Conference.Repositories
         /// <param name="optionsBuilder">Объект с опциями создания контекста</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseMySql("server=localhost;user=root;password=root;database=conference", new MySqlServerVersion(new Version(8, 0, 30)));
-            optionsBuilder.UseSqlite("Data Source=conference.db");
+            var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var dbPath = Path.Combine(appDataPath, "Conference", "conference.db");
+            optionsBuilder.UseSqlite($"Data Source={dbPath}");
+            //optionsBuilder.UseSqlite("Data Source=conference.db");
         }
     }
 }

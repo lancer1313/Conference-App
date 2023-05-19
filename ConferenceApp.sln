@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conference", "Conference\Conference.csproj", "{FD9E9FF5-FA1C-4153-93F0-8699848C0969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conference", "Conference\Conference.csproj", "{FD9E9FF5-FA1C-4153-93F0-8699848C0969}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ConferenceSetup", "ConferenceSetup\ConferenceSetup.vdproj", "{A9F8934E-7021-4257-9E5D-2F05F13C95F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{FD9E9FF5-FA1C-4153-93F0-8699848C0969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD9E9FF5-FA1C-4153-93F0-8699848C0969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD9E9FF5-FA1C-4153-93F0-8699848C0969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9F8934E-7021-4257-9E5D-2F05F13C95F9}.Debug|Any CPU.ActiveCfg = Debug
+		{A9F8934E-7021-4257-9E5D-2F05F13C95F9}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -30,14 +30,15 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.searchLabelMeeting = new System.Windows.Forms.Label();
             this.searchMeetingsBtn = new System.Windows.Forms.Button();
             this.searchValueMeeting = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.showAllDataMeetingsBtn = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.filtrationLabelMeeting = new System.Windows.Forms.Label();
             this.filterMeetingsBtn = new System.Windows.Forms.Button();
             this.filterValueMeeting = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.searchLabelPerson = new System.Windows.Forms.Label();
             this.searchPeopleBtn = new System.Windows.Forms.Button();
             this.searchValuePeople = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,6 +72,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.showAllDataPeopleBtn = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.filtrationLabelPerson = new System.Windows.Forms.Label();
             this.filterPeopleBtn = new System.Windows.Forms.Button();
             this.filterValuePeople = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,9 +81,18 @@
             this.newPersonBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.peopleTable = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.searchLabelReport = new System.Windows.Forms.Label();
             this.searchReportBtn = new System.Windows.Forms.Button();
             this.searchValueReport = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -87,6 +100,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.showAllDataReportBtn = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.filtrationLabelReport = new System.Windows.Forms.Label();
             this.filterReportBtn = new System.Windows.Forms.Button();
             this.filterValueReport = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,14 +113,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -137,7 +143,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1229, 545);
+            this.tabControl1.Size = new System.Drawing.Size(1302, 545);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -147,7 +153,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1221, 517);
+            this.tabPage1.Size = new System.Drawing.Size(1294, 517);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Собрания";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -159,15 +165,16 @@
             this.groupBox4.Controls.Add(this.showAllDataMeetingsBtn);
             this.groupBox4.Controls.Add(this.groupBox12);
             this.groupBox4.Controls.Add(this.newMeetingBtn);
-            this.groupBox4.Location = new System.Drawing.Point(941, 6);
+            this.groupBox4.Location = new System.Drawing.Point(919, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(272, 503);
+            this.groupBox4.Size = new System.Drawing.Size(367, 503);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Управление";
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.searchLabelMeeting);
             this.groupBox11.Controls.Add(this.searchMeetingsBtn);
             this.groupBox11.Controls.Add(this.searchValueMeeting);
             this.groupBox11.Controls.Add(this.label9);
@@ -175,10 +182,18 @@
             this.groupBox11.Controls.Add(this.label10);
             this.groupBox11.Location = new System.Drawing.Point(6, 256);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(260, 136);
+            this.groupBox11.Size = new System.Drawing.Size(355, 136);
             this.groupBox11.TabIndex = 9;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Поиск";
+            // 
+            // searchLabelMeeting
+            // 
+            this.searchLabelMeeting.AutoSize = true;
+            this.searchLabelMeeting.Location = new System.Drawing.Point(152, 98);
+            this.searchLabelMeeting.Name = "searchLabelMeeting";
+            this.searchLabelMeeting.Size = new System.Drawing.Size(0, 15);
+            this.searchLabelMeeting.TabIndex = 4;
             // 
             // searchMeetingsBtn
             // 
@@ -228,9 +243,9 @@
             // 
             // showAllDataMeetingsBtn
             // 
-            this.showAllDataMeetingsBtn.Location = new System.Drawing.Point(12, 74);
+            this.showAllDataMeetingsBtn.Location = new System.Drawing.Point(158, 22);
             this.showAllDataMeetingsBtn.Name = "showAllDataMeetingsBtn";
-            this.showAllDataMeetingsBtn.Size = new System.Drawing.Size(138, 32);
+            this.showAllDataMeetingsBtn.Size = new System.Drawing.Size(138, 37);
             this.showAllDataMeetingsBtn.TabIndex = 8;
             this.showAllDataMeetingsBtn.Text = "Вывести все данные";
             this.showAllDataMeetingsBtn.UseVisualStyleBackColor = true;
@@ -238,6 +253,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.filtrationLabelMeeting);
             this.groupBox12.Controls.Add(this.filterMeetingsBtn);
             this.groupBox12.Controls.Add(this.filterValueMeeting);
             this.groupBox12.Controls.Add(this.label11);
@@ -245,10 +261,18 @@
             this.groupBox12.Controls.Add(this.filterItemMeeting);
             this.groupBox12.Location = new System.Drawing.Point(6, 112);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(260, 138);
+            this.groupBox12.Size = new System.Drawing.Size(355, 138);
             this.groupBox12.TabIndex = 7;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Фильтрация";
+            // 
+            // filtrationLabelMeeting
+            // 
+            this.filtrationLabelMeeting.AutoSize = true;
+            this.filtrationLabelMeeting.Location = new System.Drawing.Point(152, 99);
+            this.filtrationLabelMeeting.Name = "filtrationLabelMeeting";
+            this.filtrationLabelMeeting.Size = new System.Drawing.Size(0, 15);
+            this.filtrationLabelMeeting.TabIndex = 5;
             // 
             // filterMeetingsBtn
             // 
@@ -315,7 +339,7 @@
             this.groupBox1.Controls.Add(this.meetingsTable);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(927, 503);
+            this.groupBox1.Size = new System.Drawing.Size(905, 503);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Собрания по секциям";
@@ -340,7 +364,7 @@
             this.meetingsTable.ReadOnly = true;
             this.meetingsTable.RowHeadersVisible = false;
             this.meetingsTable.RowTemplate.Height = 25;
-            this.meetingsTable.Size = new System.Drawing.Size(921, 481);
+            this.meetingsTable.Size = new System.Drawing.Size(899, 481);
             this.meetingsTable.TabIndex = 0;
             this.meetingsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.meetingsTable_CellContentClick);
             // 
@@ -405,7 +429,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1221, 517);
+            this.tabPage2.Size = new System.Drawing.Size(1294, 517);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Участники";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -417,15 +441,16 @@
             this.groupBox5.Controls.Add(this.showAllDataPeopleBtn);
             this.groupBox5.Controls.Add(this.groupBox10);
             this.groupBox5.Controls.Add(this.newPersonBtn);
-            this.groupBox5.Location = new System.Drawing.Point(941, 6);
+            this.groupBox5.Location = new System.Drawing.Point(898, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(272, 500);
+            this.groupBox5.Size = new System.Drawing.Size(388, 500);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Управление";
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.searchLabelPerson);
             this.groupBox9.Controls.Add(this.searchPeopleBtn);
             this.groupBox9.Controls.Add(this.searchValuePeople);
             this.groupBox9.Controls.Add(this.label5);
@@ -433,10 +458,18 @@
             this.groupBox9.Controls.Add(this.label6);
             this.groupBox9.Location = new System.Drawing.Point(6, 260);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(260, 136);
+            this.groupBox9.Size = new System.Drawing.Size(376, 136);
             this.groupBox9.TabIndex = 6;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Поиск";
+            // 
+            // searchLabelPerson
+            // 
+            this.searchLabelPerson.AutoSize = true;
+            this.searchLabelPerson.Location = new System.Drawing.Point(150, 98);
+            this.searchLabelPerson.Name = "searchLabelPerson";
+            this.searchLabelPerson.Size = new System.Drawing.Size(0, 15);
+            this.searchLabelPerson.TabIndex = 4;
             // 
             // searchPeopleBtn
             // 
@@ -488,9 +521,9 @@
             // 
             // showAllDataPeopleBtn
             // 
-            this.showAllDataPeopleBtn.Location = new System.Drawing.Point(12, 78);
+            this.showAllDataPeopleBtn.Location = new System.Drawing.Point(158, 22);
             this.showAllDataPeopleBtn.Name = "showAllDataPeopleBtn";
-            this.showAllDataPeopleBtn.Size = new System.Drawing.Size(138, 32);
+            this.showAllDataPeopleBtn.Size = new System.Drawing.Size(138, 37);
             this.showAllDataPeopleBtn.TabIndex = 5;
             this.showAllDataPeopleBtn.Text = "Вывести все данные";
             this.showAllDataPeopleBtn.UseVisualStyleBackColor = true;
@@ -498,6 +531,7 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.filtrationLabelPerson);
             this.groupBox10.Controls.Add(this.filterPeopleBtn);
             this.groupBox10.Controls.Add(this.filterValuePeople);
             this.groupBox10.Controls.Add(this.label7);
@@ -505,10 +539,18 @@
             this.groupBox10.Controls.Add(this.filterItemPeople);
             this.groupBox10.Location = new System.Drawing.Point(6, 116);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(260, 138);
+            this.groupBox10.Size = new System.Drawing.Size(376, 138);
             this.groupBox10.TabIndex = 4;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Фильтрация";
+            // 
+            // filtrationLabelPerson
+            // 
+            this.filtrationLabelPerson.AutoSize = true;
+            this.filtrationLabelPerson.Location = new System.Drawing.Point(150, 99);
+            this.filtrationLabelPerson.Name = "filtrationLabelPerson";
+            this.filtrationLabelPerson.Size = new System.Drawing.Size(0, 15);
+            this.filtrationLabelPerson.TabIndex = 5;
             // 
             // filterPeopleBtn
             // 
@@ -575,7 +617,7 @@
             this.groupBox2.Controls.Add(this.peopleTable);
             this.groupBox2.Location = new System.Drawing.Point(8, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(927, 503);
+            this.groupBox2.Size = new System.Drawing.Size(884, 503);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Участники конференции";
@@ -602,237 +644,9 @@
             this.peopleTable.ReadOnly = true;
             this.peopleTable.RowHeadersVisible = false;
             this.peopleTable.RowTemplate.Height = 25;
-            this.peopleTable.Size = new System.Drawing.Size(921, 481);
+            this.peopleTable.Size = new System.Drawing.Size(878, 481);
             this.peopleTable.TabIndex = 0;
             this.peopleTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.peopleTable_CellContentClick);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1221, 517);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Доклады";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Controls.Add(this.groupBox8);
-            this.groupBox6.Controls.Add(this.showAllDataReportBtn);
-            this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Location = new System.Drawing.Point(835, 6);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(272, 500);
-            this.groupBox6.TabIndex = 4;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Управление";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.searchReportBtn);
-            this.groupBox8.Controls.Add(this.searchValueReport);
-            this.groupBox8.Controls.Add(this.label4);
-            this.groupBox8.Controls.Add(this.searchItemReport);
-            this.groupBox8.Controls.Add(this.label3);
-            this.groupBox8.Location = new System.Drawing.Point(6, 208);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(260, 136);
-            this.groupBox8.TabIndex = 2;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Поиск";
-            // 
-            // searchReportBtn
-            // 
-            this.searchReportBtn.Location = new System.Drawing.Point(6, 98);
-            this.searchReportBtn.Name = "searchReportBtn";
-            this.searchReportBtn.Size = new System.Drawing.Size(138, 32);
-            this.searchReportBtn.TabIndex = 3;
-            this.searchReportBtn.Text = "Найти";
-            this.searchReportBtn.UseVisualStyleBackColor = true;
-            this.searchReportBtn.Click += new System.EventHandler(this.searchReportBtn_Click);
-            // 
-            // searchValueReport
-            // 
-            this.searchValueReport.Location = new System.Drawing.Point(72, 61);
-            this.searchValueReport.Name = "searchValueReport";
-            this.searchValueReport.Size = new System.Drawing.Size(179, 23);
-            this.searchValueReport.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Значение";
-            // 
-            // searchItemReport
-            // 
-            this.searchItemReport.FormattingEnabled = true;
-            this.searchItemReport.Items.AddRange(new object[] {
-            "Название",
-            "Тематика"});
-            this.searchItemReport.Location = new System.Drawing.Point(143, 26);
-            this.searchItemReport.Name = "searchItemReport";
-            this.searchItemReport.Size = new System.Drawing.Size(108, 23);
-            this.searchItemReport.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Критерий поиска";
-            // 
-            // showAllDataReportBtn
-            // 
-            this.showAllDataReportBtn.Location = new System.Drawing.Point(12, 22);
-            this.showAllDataReportBtn.Name = "showAllDataReportBtn";
-            this.showAllDataReportBtn.Size = new System.Drawing.Size(138, 32);
-            this.showAllDataReportBtn.TabIndex = 1;
-            this.showAllDataReportBtn.Text = "Вывести все данные";
-            this.showAllDataReportBtn.UseVisualStyleBackColor = true;
-            this.showAllDataReportBtn.Click += new System.EventHandler(this.showAllDataReportBtn_Click);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.filterReportBtn);
-            this.groupBox7.Controls.Add(this.filterValueReport);
-            this.groupBox7.Controls.Add(this.label2);
-            this.groupBox7.Controls.Add(this.label1);
-            this.groupBox7.Controls.Add(this.filterItemReport);
-            this.groupBox7.Location = new System.Drawing.Point(6, 64);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(260, 138);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Фильтрация";
-            // 
-            // filterReportBtn
-            // 
-            this.filterReportBtn.Location = new System.Drawing.Point(6, 99);
-            this.filterReportBtn.Name = "filterReportBtn";
-            this.filterReportBtn.Size = new System.Drawing.Size(138, 33);
-            this.filterReportBtn.TabIndex = 4;
-            this.filterReportBtn.Text = "Отфильтровать";
-            this.filterReportBtn.UseVisualStyleBackColor = true;
-            this.filterReportBtn.Click += new System.EventHandler(this.filterReportBtn_Click);
-            // 
-            // filterValueReport
-            // 
-            this.filterValueReport.Location = new System.Drawing.Point(72, 61);
-            this.filterValueReport.Name = "filterValueReport";
-            this.filterValueReport.Size = new System.Drawing.Size(179, 23);
-            this.filterValueReport.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Значение";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Критерий фильтрации";
-            // 
-            // filterItemReport
-            // 
-            this.filterItemReport.FormattingEnabled = true;
-            this.filterItemReport.Items.AddRange(new object[] {
-            "Специальность"});
-            this.filterItemReport.Location = new System.Drawing.Point(143, 25);
-            this.filterItemReport.Name = "filterItemReport";
-            this.filterItemReport.Size = new System.Drawing.Size(108, 23);
-            this.filterItemReport.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.reportTable);
-            this.groupBox3.Location = new System.Drawing.Point(8, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(821, 503);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Доклады";
-            // 
-            // reportTable
-            // 
-            this.reportTable.AllowUserToAddRows = false;
-            this.reportTable.AllowUserToDeleteRows = false;
-            this.reportTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.reportTable.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.reportTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reportTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewButtonColumn1});
-            this.reportTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportTable.Location = new System.Drawing.Point(3, 19);
-            this.reportTable.Name = "reportTable";
-            this.reportTable.ReadOnly = true;
-            this.reportTable.RowHeadersVisible = false;
-            this.reportTable.RowTemplate.Height = 25;
-            this.reportTable.Size = new System.Drawing.Size(815, 481);
-            this.reportTable.TabIndex = 0;
-            this.reportTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.reportTable_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Название";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Тематика";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Специальность";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewButtonColumn1.HeaderText = "";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Column8
             // 
@@ -900,14 +714,261 @@
             this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1294, 517);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Доклады";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.groupBox8);
+            this.groupBox6.Controls.Add(this.showAllDataReportBtn);
+            this.groupBox6.Controls.Add(this.groupBox7);
+            this.groupBox6.Location = new System.Drawing.Point(908, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(378, 500);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Управление";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.searchLabelReport);
+            this.groupBox8.Controls.Add(this.searchReportBtn);
+            this.groupBox8.Controls.Add(this.searchValueReport);
+            this.groupBox8.Controls.Add(this.label4);
+            this.groupBox8.Controls.Add(this.searchItemReport);
+            this.groupBox8.Controls.Add(this.label3);
+            this.groupBox8.Location = new System.Drawing.Point(6, 208);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(366, 136);
+            this.groupBox8.TabIndex = 2;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Поиск";
+            // 
+            // searchLabelReport
+            // 
+            this.searchLabelReport.AutoSize = true;
+            this.searchLabelReport.Location = new System.Drawing.Point(150, 98);
+            this.searchLabelReport.Name = "searchLabelReport";
+            this.searchLabelReport.Size = new System.Drawing.Size(0, 15);
+            this.searchLabelReport.TabIndex = 4;
+            // 
+            // searchReportBtn
+            // 
+            this.searchReportBtn.Location = new System.Drawing.Point(6, 98);
+            this.searchReportBtn.Name = "searchReportBtn";
+            this.searchReportBtn.Size = new System.Drawing.Size(138, 32);
+            this.searchReportBtn.TabIndex = 3;
+            this.searchReportBtn.Text = "Найти";
+            this.searchReportBtn.UseVisualStyleBackColor = true;
+            this.searchReportBtn.Click += new System.EventHandler(this.searchReportBtn_Click);
+            // 
+            // searchValueReport
+            // 
+            this.searchValueReport.Location = new System.Drawing.Point(72, 61);
+            this.searchValueReport.Name = "searchValueReport";
+            this.searchValueReport.Size = new System.Drawing.Size(179, 23);
+            this.searchValueReport.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 15);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Значение";
+            // 
+            // searchItemReport
+            // 
+            this.searchItemReport.FormattingEnabled = true;
+            this.searchItemReport.Items.AddRange(new object[] {
+            "Название",
+            "Тематика"});
+            this.searchItemReport.Location = new System.Drawing.Point(143, 26);
+            this.searchItemReport.Name = "searchItemReport";
+            this.searchItemReport.Size = new System.Drawing.Size(108, 23);
+            this.searchItemReport.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Критерий поиска";
+            // 
+            // showAllDataReportBtn
+            // 
+            this.showAllDataReportBtn.Location = new System.Drawing.Point(12, 22);
+            this.showAllDataReportBtn.Name = "showAllDataReportBtn";
+            this.showAllDataReportBtn.Size = new System.Drawing.Size(138, 32);
+            this.showAllDataReportBtn.TabIndex = 1;
+            this.showAllDataReportBtn.Text = "Вывести все данные";
+            this.showAllDataReportBtn.UseVisualStyleBackColor = true;
+            this.showAllDataReportBtn.Click += new System.EventHandler(this.showAllDataReportBtn_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.filtrationLabelReport);
+            this.groupBox7.Controls.Add(this.filterReportBtn);
+            this.groupBox7.Controls.Add(this.filterValueReport);
+            this.groupBox7.Controls.Add(this.label2);
+            this.groupBox7.Controls.Add(this.label1);
+            this.groupBox7.Controls.Add(this.filterItemReport);
+            this.groupBox7.Location = new System.Drawing.Point(6, 64);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(366, 138);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Фильтрация";
+            // 
+            // filtrationLabelReport
+            // 
+            this.filtrationLabelReport.AutoSize = true;
+            this.filtrationLabelReport.Location = new System.Drawing.Point(150, 99);
+            this.filtrationLabelReport.Name = "filtrationLabelReport";
+            this.filtrationLabelReport.Size = new System.Drawing.Size(0, 15);
+            this.filtrationLabelReport.TabIndex = 5;
+            // 
+            // filterReportBtn
+            // 
+            this.filterReportBtn.Location = new System.Drawing.Point(6, 99);
+            this.filterReportBtn.Name = "filterReportBtn";
+            this.filterReportBtn.Size = new System.Drawing.Size(138, 33);
+            this.filterReportBtn.TabIndex = 4;
+            this.filterReportBtn.Text = "Отфильтровать";
+            this.filterReportBtn.UseVisualStyleBackColor = true;
+            this.filterReportBtn.Click += new System.EventHandler(this.filterReportBtn_Click);
+            // 
+            // filterValueReport
+            // 
+            this.filterValueReport.Location = new System.Drawing.Point(72, 61);
+            this.filterValueReport.Name = "filterValueReport";
+            this.filterValueReport.Size = new System.Drawing.Size(179, 23);
+            this.filterValueReport.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Значение";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Критерий фильтрации";
+            // 
+            // filterItemReport
+            // 
+            this.filterItemReport.FormattingEnabled = true;
+            this.filterItemReport.Items.AddRange(new object[] {
+            "Специальность"});
+            this.filterItemReport.Location = new System.Drawing.Point(143, 25);
+            this.filterItemReport.Name = "filterItemReport";
+            this.filterItemReport.Size = new System.Drawing.Size(108, 23);
+            this.filterItemReport.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.reportTable);
+            this.groupBox3.Location = new System.Drawing.Point(8, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(894, 503);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Доклады";
+            // 
+            // reportTable
+            // 
+            this.reportTable.AllowUserToAddRows = false;
+            this.reportTable.AllowUserToDeleteRows = false;
+            this.reportTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.reportTable.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.reportTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reportTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewButtonColumn1});
+            this.reportTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportTable.Location = new System.Drawing.Point(3, 19);
+            this.reportTable.Name = "reportTable";
+            this.reportTable.ReadOnly = true;
+            this.reportTable.RowHeadersVisible = false;
+            this.reportTable.RowTemplate.Height = 25;
+            this.reportTable.Size = new System.Drawing.Size(888, 481);
+            this.reportTable.TabIndex = 0;
+            this.reportTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.reportTable_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Название";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Тематика";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Специальность";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dataGridViewButtonColumn1.HeaderText = "";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.ReadOnly = true;
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 545);
+            this.ClientSize = new System.Drawing.Size(1302, 545);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Конференция";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
@@ -1014,5 +1075,11 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewButtonColumn Column6;
         private DataGridViewButtonColumn Column10;
+        private Label searchLabelMeeting;
+        private Label filtrationLabelMeeting;
+        private Label searchLabelPerson;
+        private Label filtrationLabelPerson;
+        private Label searchLabelReport;
+        private Label filtrationLabelReport;
     }
 }

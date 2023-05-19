@@ -58,6 +58,8 @@ namespace Conference.Views
                     peopleTable.Rows[index].Cells[7].Value = "Удалить";
                 }
             }
+            filtrationLabelPerson.Text = "";
+            searchLabelPerson.Text = "";
         }
 
         public void DisplayMeetings()
@@ -77,6 +79,8 @@ namespace Conference.Views
                     meetingsTable.Rows[index].Cells[5].Value = "Удалить";
                 }
             }
+            filtrationLabelMeeting.Text = "";
+            searchLabelMeeting.Text = "";
         }
 
         public void DisplayReports()
@@ -95,6 +99,8 @@ namespace Conference.Views
                     reportTable.Rows[index].Cells[4].Value = "Подробнее...";
                 }
             }
+            filtrationLabelReport.Text = "";
+            searchLabelReport.Text = "";
         }
 
         private void meetingsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -180,6 +186,7 @@ namespace Conference.Views
             }
 
             reportTable.Rows.Clear();
+            int count = 0;
             using (DatabaseContext context = new DatabaseContext())
             {
                 List<Report> reports = context.Reports.ToList();
@@ -195,10 +202,14 @@ namespace Conference.Views
                             reportTable.Rows[index].Cells[2].Value = report.Theme;
                             reportTable.Rows[index].Cells[3].Value = report.Speciality;
                             reportTable.Rows[index].Cells[4].Value = "Подробнее...";
+                            count++;
                         }
                     }
                 }
             }
+            filtrationLabelReport.Text = $"Применена фильтрация.\r\nНайдено совпадений: {count}";
+            filtrationLabelReport.ForeColor = Color.Green;
+            searchLabelReport.Text = "";
         }
 
         private void searchReportBtn_Click(object sender, EventArgs e)
@@ -215,6 +226,7 @@ namespace Conference.Views
             }
 
             reportTable.Rows.Clear();
+            int count = 0;
             using (DatabaseContext context = new DatabaseContext())
             {
                 List<Report> reports = context.Reports.ToList();
@@ -240,8 +252,12 @@ namespace Conference.Views
                     reportTable.Rows[index].Cells[2].Value = report.Theme;
                     reportTable.Rows[index].Cells[3].Value = report.Speciality;
                     reportTable.Rows[index].Cells[4].Value = "Подробнее...";
+                    count++;
                 }
             }
+            searchLabelReport.Text = $"Применен поиск.\r\nНайдено совпадений: {count.ToString()}";
+            searchLabelReport.ForeColor = Color.Green;
+            filtrationLabelReport.Text = "";
         }
 
         private void showAllDataPeopleBtn_Click(object sender, EventArgs e)
@@ -263,6 +279,7 @@ namespace Conference.Views
             }
 
             peopleTable.Rows.Clear();
+            int count = 0;
             using (DatabaseContext context = new DatabaseContext())
             {
                 List<Person> people = context.People.ToList();
@@ -281,10 +298,14 @@ namespace Conference.Views
                             peopleTable.Rows[index].Cells[5].Value = person.Email;
                             peopleTable.Rows[index].Cells[6].Value = "Подробнее...";
                             peopleTable.Rows[index].Cells[7].Value = "Удалить";
+                            count++;
                         }
                     }
                 }
             }
+            filtrationLabelPerson.Text = $"Применена фильтрация.\r\nНайдено совпадений: {count}";
+            filtrationLabelPerson.ForeColor = Color.Green;
+            searchLabelPerson.Text = "";
         }
 
         private void searchPeopleBtn_Click(object sender, EventArgs e)
@@ -301,6 +322,7 @@ namespace Conference.Views
             }
 
             peopleTable.Rows.Clear();
+            int count = 0;
             using (DatabaseContext context = new DatabaseContext())
             {
                 List<Person> people = context.People.ToList();
@@ -343,8 +365,12 @@ namespace Conference.Views
                     peopleTable.Rows[index].Cells[5].Value = person.Email;
                     peopleTable.Rows[index].Cells[6].Value = "Подробнее...";
                     peopleTable.Rows[index].Cells[7].Value = "Удалить";
+                    count++;
                 }
             }
+            searchLabelPerson.Text = $"Применен поиск.\r\nНайдено совпадений: {count}";
+            searchLabelPerson.ForeColor = Color.Green;
+            filtrationLabelPerson.Text = "";
         }
 
         private void showAllDataMeetingsBtn_Click(object sender, EventArgs e)
@@ -366,6 +392,7 @@ namespace Conference.Views
             }
 
             meetingsTable.Rows.Clear();
+            int count = 0;
             using (DatabaseContext context = new DatabaseContext())
             {
                 List<Meeting> meetings = context.Meetings.Include(m => m.People).ToList();
@@ -382,10 +409,14 @@ namespace Conference.Views
                             meetingsTable.Rows[index].Cells[3].Value = meeting.People.Count;
                             meetingsTable.Rows[index].Cells[4].Value = "Подробнее...";
                             meetingsTable.Rows[index].Cells[5].Value = "Удалить";
+                            count++;
                         }
                     }
                 }
             }
+            filtrationLabelMeeting.Text = $"Применена фильтрация.\r\nНайдено совпадений: {count}";
+            filtrationLabelMeeting.ForeColor = Color.Green;
+            searchLabelMeeting.Text = "";
         }
 
         private void searchMeetingsBtn_Click(object sender, EventArgs e)
@@ -402,6 +433,7 @@ namespace Conference.Views
             }
 
             meetingsTable.Rows.Clear();
+            int count = 0;
             using (DatabaseContext context = new DatabaseContext())
             {
                 List<Meeting> meetings = context.Meetings.Include(m => m.People).ToList();
@@ -428,8 +460,12 @@ namespace Conference.Views
                     meetingsTable.Rows[index].Cells[3].Value = meeting.People.Count;
                     meetingsTable.Rows[index].Cells[4].Value = "Подробнее...";
                     meetingsTable.Rows[index].Cells[5].Value = "Удалить";
+                    count++;
                 }
             }
+            searchLabelMeeting.Text = $"Применен поиск.\r\nНайдено совпадений: {count}";
+            searchLabelMeeting.ForeColor = Color.Green;
+            filtrationLabelMeeting.Text = "";
         }
     }
 }

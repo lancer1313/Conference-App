@@ -15,8 +15,6 @@ D:\Works C#\ConferenceApp\Conference\bin\Debug\net6.0-windows\Microsoft.Extensio
 D:\Works C#\ConferenceApp\Conference\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Works C#\ConferenceApp\Conference\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
 D:\Works C#\ConferenceApp\Conference\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-D:\Works C#\ConferenceApp\Conference\bin\Debug\net6.0-windows\MySqlConnector.dll
-D:\Works C#\ConferenceApp\Conference\bin\Debug\net6.0-windows\Pomelo.EntityFrameworkCore.MySql.dll
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.csproj.AssemblyReference.cache
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.Views.MainForm.resources
 D:\Works C#\ConferenceApp\Conference\obj\Debug\net6.0-windows\Conference.csproj.GenerateResource.cache

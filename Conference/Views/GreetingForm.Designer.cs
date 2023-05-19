@@ -75,6 +75,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GreetingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Информация об авторе и тема проекта";
             this.Load += new System.EventHandler(this.GreetingForm_Load);
             this.ResumeLayout(false);
